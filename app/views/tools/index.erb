@@ -1,0 +1,27 @@
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+
+<h3 class="center">Random Tool Generator</h3>
+<h5 class="center">Explore these great dev tools!</h5>
+<div ng-app="stackApp">
+	<div class="container" ng-controller="ToolController">
+		<ul class="collapsible popout" data-collapsible="accordion">
+        	<li class="tool" ng-repeat="tool in tools">
+          		<div class="collapsible-header">
+          			<div class="center">
+			          	<img class="logo" src="{{tool.image_url}}"></img>
+			          	<h3 class="tool_name">
+			          		<a href="{{tool.website_url}}">{{tool.name}}</a>
+			          	</h3>
+		          		<h5>{{tool.tag_line}}</h5>
+		          	</div>
+          		</div>
+        	</li>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,1 @@
+var stackApp = angular.module('stackApp', []);
